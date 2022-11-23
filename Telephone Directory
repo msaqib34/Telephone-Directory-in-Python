@@ -1,0 +1,24 @@
+Code: Telephone Directory
+
+
+telephone_direc= open("telephone-dirc.txt" , "a")
+choice=eval(input("Enter 1 to add contact \n OR \nEnter 2 to Read "))
+if (choice==1):
+   for i in range(10):
+       name = input("Name")
+       telephone_direc.write('\n'+name+'\t')
+       phone = (input("Phone"))
+       telephone_direc.write(phone+'\t')
+       address=input("Adress")
+       telephone_direc.write(address+'\t')
+       CNIC=input("CNIC")
+       telephone_direc.write(CNIC+'\t')
+       choice=eval(input("Enter 0 to exit"))
+       if choice==0:
+        break
+elif (choice==2):
+  # input2 = input("Enter 2 to read ")
+   telephone_direc = open("telephone-dirc.txt", "r")
+   print(telephone_direc.read())
+else:
+   print("Error ; Enter Valid NO")
